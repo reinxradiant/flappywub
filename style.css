@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Pixelify Sans", sans-serif;
+}
+
+.background {
+	height: 100vh;
+	width: 100vw;
+	background: url('images/background-img.gif') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.bird {
+	height: 100px;
+	width: 130px;
+	position: fixed;
+	top: 40vh;
+	left: 30vw;
+	z-index: 100;
+}
+
+.pipe_sprite {
+	position: fixed;
+	top: 40vh;
+	left: 100vw;
+	height: 70vh;
+	width: 6vw;
+	animation: gradientAnimation 2s linear infinite;
+	border: 3px solid rgb(136, 0, 255);
+}
+
+@keyframes gradientAnimation {
+	0%, 100% {
+		background: radial-gradient(circle at center, #ff0091, #f3009d, #e400a8, #d200b4, #bd00bf);
+	}
+	25% {
+		background: radial-gradient(circle at top left, #d800b1, #ee00a3, #ff0095, #ff446a, #ff863b);
+	}
+	50% {
+		background: radial-gradient(circle at center, #ffc500, #fffe00, #ff0091, #f3009d, #e400a8);
+	}
+	75% {
+		background: radial-gradient(circle at bottom right, #bd00bf, #d800b1, #ee00a3, #ff0095, #ff446a);
+	}
+}
+
+.message {
+	position: absolute;
+	z-index: 10;
+	color: rgb(255, 255, 255);
+	top: 50%;
+	left: 50%;
+	font-size: 4em;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.socials {
+	display: inline;
+}
+
+.socials a {
+    display: inline-block;
+	text-decoration: none;
+	color: #fffe00;
+	font-size: 25px;
+
+}
+
+
+
+.message button{
+	padding: 10px;
+	background-color: rgb(255, 0, 187);
+	border: none;
+	outline: none;
+	font-size: 20px;
+	color:#fffe00;
+}
+
+
+
+.messageStyle {
+	background: rgba(217, 0, 255, 0.364);
+	padding: 20px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	border-radius: 0%;
+}
+
+.score {
+	position: fixed;
+	z-index: 10;
+	height: 10vh;
+	font-size: 7vh;
+	font-weight: 100;
+	color: white;
+	-webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+	top: 0;
+	left: 0;
+	margin: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.score_val {
+	color: gold;
+	font-weight: bold;
+}
+
+@media only screen and (max-width: 1080px) {
+    .message {
+		font-size: 50px;
+		top: 50%;
+		white-space: nowrap;
+	}
+	.score {
+		font-size: 8vh;
+	}
+	.bird {
+		width: 120px;
+		height: 90px;
+	}
+	.pipe_sprite {
+		width: 14vw;
+	}
+}
